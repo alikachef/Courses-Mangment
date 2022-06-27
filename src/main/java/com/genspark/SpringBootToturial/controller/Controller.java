@@ -14,11 +14,6 @@ public class Controller {
     @Autowired
     private CourseService courseService;
 
-    @RequestMapping("/")
-    public String home(){
-        return "<html><h1>Welcome to the Course Project</h1></html>";
-    }
-
     @GetMapping("/courses")
     public List<Course> getCourses(){
         return this.courseService.getAllCourse();
